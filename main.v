@@ -2,8 +2,8 @@
 
 //-- Template for the top entity
 module top (
-    input   wire  clk,
-    input   wire  reset_n,
+    input   wire        clk,
+    input   wire        reset_n,
     output  reg   [7:0] alu_out
 );
 
@@ -19,21 +19,21 @@ module top (
 
   always @(posedge clk) begin
     if (!reset_n) begin
-      pc <= 16'd0;
+      program_counter <= 16'd0;
       alu_out <= 8'd0;
     end
     
     else begin
-      case (instruction)
-        4'b0000: alu_out <= 8'd0; // NOP
-        default: alu_out <= 8'd0; // Default case for unrecognized instructions
+      case (state)
+        0 : alu_out <= 8'd0; // NOP
+
       endcase
 
     end
     
     
     // Increment the Program Counter
-    pc <= pc + 1;
+    program_counter <= program_counter + 1;
 
   end
 
