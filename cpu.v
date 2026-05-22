@@ -11,8 +11,8 @@ module top(
 );
 
     // Memory
-    reg [7:0] ram [0:256];
-    reg [7:0] rom [0:256];
+    reg [7:0] ram [0:255];
+    reg [7:0] rom [0:255];
 
     // Registers
     reg [7:0] pc;
