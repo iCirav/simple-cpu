@@ -37,7 +37,7 @@ module ram_tb;
         // Write decimal 50 to address 0
         #10;
         address = 13'd0;
-        data_in = 8'd50;
+        data_in = 8'h50;
         write_enable = 1;
 
         // Wait for clock edge to perform write
