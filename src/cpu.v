@@ -1,6 +1,6 @@
 `default_nettype none
 
-module top(
+module cpu(
     input   wire            CLK,
     input   wire            reset_n,
     output  reg     [7:0]   alu_out,
