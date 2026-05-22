@@ -10,17 +10,16 @@ module led(
 
     always @(*) begin
         // Initialize the LEDs
-        LED1 <= 1'b0;
-        LED2 <= 1'b0;
-        LED3 <= 1'b0;
-        LED4 <= 1'b0;
+        LED1 = 1'b0;
+        LED2 = 1'b0;
+        LED3 = 1'b0;
+        LED4 = 1'b0;
 
         case (led_bus)
             2'b00 : LED1 = 1'b1;
             2'b01 : LED2 = 1'b1;
             2'b10 : LED3 = 1'b1;
-            2'b11 : LED4 = 1'b1;
-        
+            2'b11 : LED4 = 1'b1;  
         endcase
     end
 endmodule
