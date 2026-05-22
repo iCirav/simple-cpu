@@ -12,7 +12,7 @@ module rom (
 
     always @(posedge CLK) begin
         if (chip_enable) begin
-            data_out <= memory[address];
+            data_out <= memory[address[10:0]];
         end
     end
 endmodule
