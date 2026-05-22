@@ -1,18 +1,18 @@
 `default_nettype none
 
-module cpu(
+module top(
     input   wire            CLK,
     input   wire            reset_n,
     output  reg     [7:0]   alu_out,
-    output  wire            LED1,
-    output  wire            LED2,
-    output  wire            LED3,
-    output  wire            LED4
+    output  reg             LED1,
+    output  reg             LED2,
+    output  reg             LED3,
+    output  reg             LED4
 );
 
     // Memory
-    reg [7:0] ram [256:0];
-    reg [7:0] rom [256:0];
+    reg [7:0] ram [0:256];
+    reg [7:0] rom [0:256];
 
     // Registers
     reg [7:0] pc;

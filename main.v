@@ -1,16 +1,15 @@
 `default_nettype none
-`include "ram.v"
 
 //-- Template for the top entity
-module top (
+module main (
     input   wire        clk,
     input   wire        reset_n,
     input   wire [7:0]  data_in,
-    output  wire [12:0] address,
+    output  reg [12:0] address,
     output  wire [7:0]  data_out,
     output  reg  [7:0]  alu_out,
-    output  wire        write_enable,
-    output  wire        chip_enable
+    output  reg        write_enable,
+    output  reg        chip_enable
 );
 
   // Registers
