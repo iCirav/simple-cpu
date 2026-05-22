@@ -11,8 +11,8 @@ module top(
 );
 
     // Memory
-    reg [7:0] ram [0:255];
-    reg [7:0] rom [0:255];
+    // reg [7:0] ram [0:255];
+    // reg [7:0] rom [0:255];
 
     // Registers
     reg [7:0] pc;
@@ -35,17 +35,17 @@ module top(
             pc <= 0;
             state <= 0;
             halt_flag <= 0;
-            LED1 <= 0;
-            LED2 <= 0;
-            LED3 <= 1;
-            LED4 <= 0;
+            LED1 <= 1'b0;
+            LED2 <= 1'b0;
+            LED3 <= 1'b1;
+            LED4 <= 1'b0;
 
         end else begin
             if (!halt_flag) begin
-                LED1 <= 1;
-                LED2 <= 0;
-                LED3 <= 0;
-                LED4 <= 0;
+                LED1 <= 1'b1;
+                LED2 <= 1'b0;
+                LED3 <= 1'b0;
+                LED4 <= 1'b0;
                 case (state)
                     0 : begin // fetch
                         instruction <= rom[pc];
@@ -63,7 +63,6 @@ module top(
                         case (opcode)
                             2'b00 : begin
                                 pc <= pc + 1;       // NOP
-                                LED1 <= 1;
                             end 
 
                             2'b01 : pc <= data;         // JMP
@@ -74,10 +73,10 @@ module top(
                     end
                 endcase
             end else begin
-                LED1 <= 0;
-                LED2 <= 2;
-                LED3 <= 0;
-                LED4 <= 0;
+                LED1 <= 1'b0;
+                LED2 <= 1'b2;
+                LED3 <= 1'b0;
+                LED4 <= 1'b0;
             end
         end
     end
