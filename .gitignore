@@ -1,4 +1,19 @@
-_build
+# Build outputs
+build/
+*.asc
+*.bin
+*.json
+*.log
+
+# Simulation
+*.vcd
+*.fst
+
+# MacOS
 .DS_Store
-main.v
-main_tb.v
+
+# VSCode
+.vscode/
+
+# Python
+__pycache__/
