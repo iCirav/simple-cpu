@@ -7,7 +7,7 @@
 `default_nettype none `timescale 100 ns / 10 ns
 
 module main_tb ();
-
+  // remove
   //-- Simulation time: 1us (10 * 100ns)
   parameter DURATION = 10;
 
