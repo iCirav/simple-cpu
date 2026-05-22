@@ -6,9 +6,12 @@ module rom (
     input wire          chip_enable,
     output reg  [7:0]   data_out
 );
-
     // 2KB of ROM
     reg [7:0] memory [0:2047];
+
+    initial begin
+        $readmemh("program.hex", memory);
+    end
 
     always @(posedge CLK) begin
         if (chip_enable) begin
