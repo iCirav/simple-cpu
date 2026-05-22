@@ -26,16 +26,30 @@ module rom_tb;
         CLK = 0;
         chip_enable = 1;
 
-        for (i = 0; i < 16 ; i = i +1) begin
+        $display("\nHex Viewer:");
+        $display("------------------------------------------------");
+
+        for (i = 0; i < 2048; i = i + 1) begin
+
             address = i;
+
+            // Wait for synchronous ROM read
             #10;
 
-            if ((i % 8) == 0)
-                $write("\n%04h: ", i);
+            // New row every 16 bytes
+            if ((i % 16) == 0) begin
+                if (i != 0)
+                    $write("\n");
+
+                $write("%04h: ", i);
+            end
+
             $write("%02h ", data_out);
 
         end
+
         $write("\n");
+        $display("------------------------------------------------");
 
         #10;
         $finish;

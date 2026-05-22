@@ -9,7 +9,13 @@ module rom (
     // 2KB of ROM
     reg [7:0] memory [0:2047];
 
+    integer i;
+
     initial begin
+        for (i = 0; i < 2048; i = i + 1) begin
+            memory[i] = 8'h00;
+        end
+
         $readmemh("program.hex", memory);
     end
 

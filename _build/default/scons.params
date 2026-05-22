@@ -1,4 +1,4 @@
-timestamp: "21200611449"
+timestamp: "21210459546"
 arch: ICE40
 fpga_info {
   fpga_id: "ice40hx1k-vq100"
@@ -26,7 +26,7 @@ apio_env_params {
 }
 target {
   sim {
-    testbench_path: "tb/ram_tb.v"
+    testbench_path: "tb/rom_tb.v"
     force_sim: false
     no_gtkwave: false
     detach_gtkwave: false
