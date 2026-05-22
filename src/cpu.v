@@ -4,10 +4,6 @@ module cpu(
     input   wire            CLK,
     input   wire            reset_n,
     output  reg     [7:0]   alu_out,
-    output  reg             LED1,
-    output  reg             LED2,
-    output  reg             LED3,
-    output  reg             LED4
 );
 
     // Memory
