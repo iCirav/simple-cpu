@@ -74,7 +74,7 @@ module cpu(
                 endcase
             end else begin
                 LED1 <= 1'b0;
-                LED2 <= 1'b2;
+                LED2 <= 1'b1;
                 LED3 <= 1'b0;
                 LED4 <= 1'b0;
             end
