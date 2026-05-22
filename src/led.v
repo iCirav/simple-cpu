@@ -19,7 +19,8 @@ module led(
             2'b00 : LED1 = 1'b1;
             2'b01 : LED2 = 1'b1;
             2'b10 : LED3 = 1'b1;
-            2'b11 : LED4 = 1'b1;  
+            2'b11 : LED4 = 1'b1;
+            default: ;  
         endcase
     end
 endmodule

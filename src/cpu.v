@@ -3,7 +3,7 @@
 module cpu(
     input   wire            CLK,
     input   wire            reset_n,
-    output  reg     [7:0]   alu_out,
+    output  reg     [7:0]   alu_out
 );
 
     // Memory
@@ -20,28 +20,14 @@ module cpu(
     // Flags
     reg [0:0] halt_flag;
 
-    // LED pattern
-    // LED1 = CPU Running
-    // LED2 = CPU Halted
-    // LED3 = CPU in Reset
-    // LED4 = Unused
-
     always @(posedge CLK) begin
         if (!reset_n) begin
             pc <= 0;
             state <= 0;
             halt_flag <= 0;
-            LED1 <= 1'b0;
-            LED2 <= 1'b0;
-            LED3 <= 1'b1;
-            LED4 <= 1'b0;
 
         end else begin
             if (!halt_flag) begin
-                LED1 <= 1'b1;
-                LED2 <= 1'b0;
-                LED3 <= 1'b0;
-                LED4 <= 1'b0;
                 case (state)
                     0 : begin // fetch
                         instruction <= rom[pc];
@@ -69,10 +55,6 @@ module cpu(
                     end
                 endcase
             end else begin
-                LED1 <= 1'b0;
-                LED2 <= 1'b1;
-                LED3 <= 1'b0;
-                LED4 <= 1'b0;
             end
         end
     end
