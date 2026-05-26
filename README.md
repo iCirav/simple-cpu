@@ -4,7 +4,7 @@ A minimal educational 8-bit CPU written in Verilog.
 
 ## Features
 - 8-bit architecture
-- FSM control unit
+- FSM control unit - done
 - ROM/RAM separation
 - FPGA compatible
 - Designed for learning HDL
