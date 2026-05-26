@@ -1,7 +1,7 @@
 # TODO
 
 ## CPU Core
-- [ ] Implement fetch/decode/execute FSM
+- [X] Implement fetch/decode/execute FSM
 - [ ] Add register file
 - [ ] Add ALU operations
   - [ ] ADD
