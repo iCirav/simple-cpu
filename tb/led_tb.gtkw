@@ -7,29 +7,7 @@
 [*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
 
 [*]
-led_tb.LED10_Address
-led_tb.LED11_Address
-led_tb.LED12_Address
-led_tb.LED13_Address
-led_tb.LED14_Address
-led_tb.LED15_Address
-led_tb.LED16_Address
-led_tb.LED1_Address
-led_tb.LED1_Data
-led_tb.LED2_Address
-led_tb.LED2_Data
-led_tb.LED3_Address
-led_tb.LED3_Data
-led_tb.LED4_Address
-led_tb.LED4_Data
-led_tb.LED5_Address
-led_tb.LED5_Data
-led_tb.LED6_Address
-led_tb.LED6_Data
-led_tb.LED7_Address
-led_tb.LED7_Data
-led_tb.LED8_Address
-led_tb.LED8_Data
-led_tb.LED9_Address
+led_tb.led_address[15:0]
 led_tb.led_address_bus[15:0]
+led_tb.led_data[7:0]
 led_tb.led_data_bus[7:0]
